@@ -4,11 +4,11 @@ import SimpleWalletABI from "../artifacts/contracts/SimpleWallet.sol/SimpleWalle
 
 const SimpleWallet = ({ address }) => {
   const [balance, setBalance] = useState(0);
-  const [transferAddress, setTransferAddress] = useState("");
-  const [transferAmount, setTransferAmount] = useState("");
-  const [web3, setWeb3] = useState(null)
-  const [userAddress, setUserAddress] = useState(null);
-  const [contract, setContract] = useState(null);
+  const [transferAddress, setTransferAddress] = useState(undefined);
+  const [transferAmount, setTransferAmount] = useState(undefined);
+  const [web3, setWeb3] = useState(undefined)
+  const [userAddress, setUserAddress] = useState(undefined);
+  const [contract, setContract] = useState(undefined);
 
   useEffect(() => {
     window.ethereum ?
